@@ -51,7 +51,7 @@ template < class T> void myFunc (T i)
 	std::cout << ' ' << i;
 }
 
-myBad (int &i)
+void myBad (int &i)
 {				// function:
 	i = i * 10;
 	std::cout << ' ' << i;
@@ -62,6 +62,8 @@ template <class T> class List:public T
 	public:
 		static constexpr auto isStdArry =  is_stl_array<T>::value;
 		static constexpr auto isStdSet =  is_stl_set<T>::value;
+
+		List () = default;
 		List (std::initializer_list <typename T::value_type> init) 
 		{
 			if constexpr (isStdSet)
@@ -80,7 +82,6 @@ template <class T> class List:public T
 					}	
 				}
 		}
-		List () = default;
 
 		template < class V > auto fill (V v)
 		{
@@ -175,11 +176,11 @@ template <class T> class List:public T
 
 struct Sum
 {
-	Sum (): sum { 0} { }
-	int sum;
+	Sum (): _sum { 0} { }
+	int _sum;
 	void
 		operator () (int n)
-		{ sum += n;}
+		{ _sum += n;}
 };
 int main ()
 {
