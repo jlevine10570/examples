@@ -11,12 +11,12 @@
 void t1();
 template < class T1 > void  What()
 {
-                        puts (__PRETTY_FUNCTION__);
+	puts (__PRETTY_FUNCTION__);
 }
 
 template <> void  What<int>()
 {
-                        puts (__PRETTY_FUNCTION__);
+	puts (__PRETTY_FUNCTION__);
 }
 
 namespace is_stl_container_impl{
@@ -41,12 +41,12 @@ template < class T> void myFunc (T i)
 	std::cout << ' ' << i;
 }
 
-	void my_functionC (const std::string &i)
+void my_functionC (const std::string &i)
 {				// function:
 	std::cout << ' ' << i;
 }
 
-	void my_function (const int &i)
+void my_function (const int &i)
 {				// function:
 	std::cout << ' ' << i;
 }
@@ -60,27 +60,25 @@ void myBad (int &i)
 template <class T> class List:public T
 {
 	public:
-		static constexpr auto isStdArry =  is_stl_array<T>::value;
-		static constexpr auto isStdSet =  is_stl_set<T>::value;
-
+		static constexpr auto isStdArray =  is_stl_array<T>::value;
+		static constexpr auto isStdSet   =  is_stl_set<T>::value;
+		static constexpr auto isStdCont  =  !isStdSet && !isStdArray;
 		List () = default;
 		List (std::initializer_list <typename T::value_type> init) 
 		{
-			if constexpr (isStdSet)
-				this->insert(init);
-			else
-				if constexpr (!isStdArry)
-					this->assign(init);
-				else
-				{	
-					int i=0;
-					for ( auto x : init )
-					{
-						//std::cout << "i == " << i << " data = "<< x << '\n'; 
-						this->operator[](i++)=x;
+			if constexpr (isStdSet)  this->insert(init);
+			if constexpr (isStdCont) this->assign(init);
 
-					}	
-				}
+			if( isStdArray)
+			{	
+				int i=0;
+				for ( auto x : init )
+				{
+					//std::cout << "i == " << i << " data = "<< x << '\n'; 
+					this->operator[](i++)=x;
+
+				}	
+			}
 		}
 
 		template < class V > auto fill (V v)
@@ -252,8 +250,8 @@ int main ()
 	if (v.allof( [](int i){ return i > 0 ; })) 
 	{
 		std::cout << " all of\n ";
-       	         v.print() ;
-		 std::cout << " greater then 0 \n";
+		v.print() ;
+		std::cout << " greater then 0 \n";
 	}
 	return 0; 
 }
