@@ -27,6 +27,8 @@ int main ()
 	List <std::array<std::string,5>> marray = { "Jeremy","Marcy","Jacob","Sydney","Dylan" }; //
 	marray.span(my_functionC);
 	std::cout << '\n';
+ List <std::array<int,12>> _items  {1,1,2,1,1,1,1,1,1,1,1,1,1};
+ std::cout << _items.size() << "?\n";
 
 	What<std::array<int,5>>();
 
@@ -82,7 +84,9 @@ int main ()
 	std::cout << '\n';
 	int product = std::accumulate(v.begin(), v.end(), 1, std::multiplies<int>());
 	std::cout << "Product  " << product<< '\n';
-	product = v.acc(v.begin(), v.end(), 1, std::multiplies<int>());
+	product = v.acc(v.begin(), v.end(), 1, std::multiplies<>());
+	product = v.acc(v.begin(), v.end(), 1, std::plus<>());
+	std::cout << "sum " << product<< '\n';
 	std::cout << "Product  " << product<< '\n';
 	product = v.acc( 1, std::multiplies<int>());
 	std::cout << "Product  " << product<< '\n';
