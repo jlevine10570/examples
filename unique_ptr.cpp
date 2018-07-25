@@ -20,9 +20,9 @@ unique_ptr<A> myFun()
 }
 int main()
 {
-	const A& rA = *myFun(); // nope !
-	//const auto rA1 &  = myFun();
-	//std::cout << rA1->z << "\n";
+	const A& rA = *myFun(); // nope ! With out the next two lines the datas life time ends 
+//const auto rA1   = myFun();
+//std::cout << rA1->z << "\n";
 	std::cout << rA.z << "\n";
 }
 
