@@ -15,6 +15,7 @@ struct A {
 
 unique_ptr<A> myFun() {
   unique_ptr<A> pa(new A());
+  // nope !! unique_ptr<A> px = pa;
   return pa;
 }
 A *myFunP() {
@@ -22,6 +23,9 @@ A *myFunP() {
   return pa;
 }
 int main() {
+  unique_ptr<A> au = myFun();  
+  unique_ptr<A> ab;
+
   const A &rA = *myFun();  // nope !
   std::cout << rA.z << "\n";
   const A arA = *myFunP(); // nope !

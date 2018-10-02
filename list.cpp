@@ -27,7 +27,7 @@ int main ()
 	List <std::array<std::string,5>> marray = { "Jeremy","Marcy","Jacob","Sydney","Dylan" }; //
 	marray.span(my_functionC);
 	std::cout << '\n';
- List <std::array<int,12>> _items  {1,1,2,1,1,1,1,1,1,1,1,1,1};
+ List <std::array<int,12>> _items  {1,1,2,1,1,1,1,1,1,1,1,1};
  std::cout << _items.size() << "?\n";
 
 	What<std::array<int,5>>();

@@ -128,6 +128,10 @@ int main ()
 
 heaps();
 
+std::vector<int> vec;
+vec.reserve(3);
+vec[0]=1;
+vec[5]=1; //really wrong but compiles 
 }
 
 
