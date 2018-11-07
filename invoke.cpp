@@ -7,7 +7,7 @@
 template <typename Range, typename Callable>
 void transform_print(const Range &r, Callable c) {
   for (const auto &e : r) {
-    std::cout << invoke(c, e) << std::endl;
+    std::cout << std::invoke(c, e) << std::endl;
   }
 }
 

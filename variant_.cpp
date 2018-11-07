@@ -37,8 +37,8 @@ int main ()
   std::variant<int, std::string> v;
 
   std::cout << std::endl;
-  std::string (z);		//ughhh
-  std::string { z};				//ughhhhhhhhhhhh
+  std::string (z);		//ughhh - Create a variable z 
+  std::string { z};				//ughhhhhhhhhhhh creates an anon string based on z
 
   TV tv;
 

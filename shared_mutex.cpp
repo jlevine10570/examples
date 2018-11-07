@@ -9,19 +9,19 @@ class ThreadSafeCounter {
  
   // Multiple threads/readers can read the counter's value at the same time.
   unsigned int get() const {
-    std::shared_lock<std::shared_mutex> lock(mutex_);
+    std::shared_lock<std::shared_mutex> the_lock(mutex_);
     return value_;
   }
  
   // Only one thread/writer can increment/write the counter's value.
   void increment() {
-    std::unique_lock<std::shared_mutex> lock(mutex_);
+    std::unique_lock<std::shared_mutex> the_lock(mutex_);
     value_++;
   }
  
   // Only one thread/writer can reset/write the counter's value.
   void reset() {
-    std::unique_lock<std::shared_mutex> lock(mutex_);
+    std::unique_lock<std::shared_mutex> the_lock(mutex_);
     value_ = 0;
   }
  

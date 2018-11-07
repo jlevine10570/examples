@@ -21,9 +21,30 @@ int fib(int n)
   return b; 
 } 
   
+template<int n>
+struct fibonacci
+{
+  static constexpr int value = fibonacci<n-1>::value + fibonacci<n-2>::value;
+};
+template<>
+struct fibonacci<0>
+{
+  static constexpr int value = 0;
+};
+template<>
+struct fibonacci<1>
+{
+  static constexpr int value = 1;
+};
 
+int mainx()
+{
+	std::cout << " Template " << fibonacci<25>::value << std::endl;
+    return 0;
+}
 
 int main()
 {
 std::cout << f(13) << '\n';
+mainx();
 }
