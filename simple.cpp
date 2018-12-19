@@ -5,7 +5,7 @@ using namespace std;
 
 class A {
 public:
-  A() { std::cout << " def ctro for A \n"; }
+  A() { std::cout << " def ctor for A \n"; }
   A(int ii) : i(ii) {}
   void show() { cout << "A.show() i = " << i << endl; }
   void operator()() { std::cout << " No op \n"; }
@@ -15,15 +15,16 @@ private:
 };
 
 class B {
+private:
+  int x;
 public:
   explicit B(int xx) : x(xx) { std::cout << " Call B ctor \n"; }
-  operator A() const {
+  operator A() const 
+  {
     std::cout << " Call conversion operator A () \n";
     return A(x);
   }
 
-private:
-  int x;
 };
 
 void g(A a) { a.show(); }
@@ -34,7 +35,8 @@ int main()
   for (i = 0; i < 10; i++) {
     int z = i;
     std::cout << "Loop < " << z << " \n";
-    A a;
+    A a(10);
+    g(a);
     z = 10;
   }
   return 0;

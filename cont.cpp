@@ -35,7 +35,12 @@ class Conts
 		}
 
 };
+void foo(int x) { std::cout << " int \n";}
+void foo( char x) {std::cout << " char \n";}
 int main ()
 {
 	Conts x;
+	foo(4);
+	// double dd=2.9;
+	// foo(d); ambiguos 
 }
