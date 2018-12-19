@@ -14,7 +14,7 @@ void transfer(Box &from, Box &to, int num)
     // don't actually take the locks yet
     std::unique_lock<std::mutex> lock1(from.m, std::defer_lock);
     std::unique_lock<std::mutex> lock2(to.m, std::defer_lock);
-    std::unique_lock<std::mutex> (oops); // usless temp variable call oops  calls def ctor
+    std::unique_lock<std::mutex> (oops); // usless temp variable called oops  calls def ctor
     auto x = oops.owns_lock(); // but has no actual mutex ???
 
     

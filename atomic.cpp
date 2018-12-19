@@ -11,10 +11,6 @@ int main()
 }
 
 
-
-
-
-
 void read (){
     static int loc=0;
 for (;;)

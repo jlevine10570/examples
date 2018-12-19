@@ -17,11 +17,11 @@ template < class T1 > void  What()
 
 
 namespace is_stl_container_impl{
-	template <typename T>       struct is_stl_array:std::false_type{};
+	template <typename T> struct is_stl_array:std::false_type{};
 	template <typename T, std::size_t N> struct is_stl_array<std::array<T,N>>:std::true_type{};
 
 	template <typename T> struct is_stl_set:std::false_type{};
-	template <typename T> struct is_stl_set<std::set<T>>:std::true_type{};
+	template <typename T> struct is_stl_set<std::set<T>>:std::true_type{}; // all I do is inheirt 
 }
 
 template <typename T> struct is_stl_array {
