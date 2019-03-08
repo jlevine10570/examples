@@ -37,7 +37,7 @@ int main() {
     Cat cat;
     Eagle eagle;
     Dog dog;
-    /* We dont need to add to the call Cat::biological_class()*/);
+    /* We dont need to add to the call Cat::biological_class()*/
     give_information(cat);
     give_information(eagle);
     give_information(dog);

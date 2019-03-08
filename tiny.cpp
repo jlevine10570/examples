@@ -80,7 +80,7 @@ template <class T> class Baked_Container:public T
 
 void heaps()
 {
-				 std::vector<int> v = {3, 1, 4, 1, 5, 9}; 
+    std::vector<int> v = {3, 1, 4, 1, 5, 9}; 
  
     std::make_heap(v.begin(), v.end());
  
@@ -131,7 +131,8 @@ heaps();
 std::vector<int> vec;
 vec.reserve(3);
 vec[0]=1;
-vec[5]=1; //really wrong but compiles 
+vec[2]=1;
+//vec[5]=1; //really wrong but compiles 
 }
 
 

@@ -11,6 +11,7 @@ public:
 private:
     T value_;
 };
+#if 0
 template<typename T>
 class WrapperAlt // will give error
 {
@@ -22,6 +23,7 @@ public:
 private:
     T value_;
 };
+#endif 
 int main()
 {
     using IntRefWrapperS = Wrapper<int>;

@@ -34,7 +34,7 @@ for (;;)
 ++loc;
 if ( loc == 9 ) loc = 0;
    char * x ;
-    zz[loc] =x;
+    zz[loc].store(x); 
  
 }
 }

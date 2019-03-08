@@ -1,3 +1,5 @@
+//
+//  Virtual destructor missing 
 #include <functional>
 #include <iostream>
 #include <memory>

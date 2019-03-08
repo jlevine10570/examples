@@ -1,5 +1,6 @@
 // C++ program for implementation of Heap Sort 
 #include <iostream> 
+#include <cstdio> 
   
 using namespace std; 
 void pHeap(int arr[], int n,int i ) 
@@ -43,7 +44,7 @@ void heapify(int arr[], int n, int i)
     if (largest != i) 
     { 
         swap(arr[i], arr[largest]); 
-	std::cout << "Swap " << arr[i] << " " << arr[largest] << std::endl;
+	//std::cout << "Swap " << arr[i] << " " << arr[largest] << std::endl;
   
         // Recursively heapify the affected sub-tree 
         heapify(arr, n, largest); 
@@ -57,11 +58,11 @@ void heapSort(int arr[], int n)
     // Build heap (rearrange array) 
     for (int i = n / 2 - 1; i >= 0; i--) 
     {
-	    std::cout << "call heapify \n";
-        printArray(arr, n); 
+//        std::cout << "call heapify \n";
+ //       printArray(arr, n); 
         heapify(arr, n, i); 
     }
-    std::cout << "-- Start sort step ----------------------------\n";
+    std::cout << "\n-- Print  Array ----------------------------\n";
         printArray(arr, n); 
     std::cout << "-- Start sort step ----------------------------\n";
   
@@ -70,6 +71,7 @@ void heapSort(int arr[], int n)
     { 
         // Move current root to end 
         swap(arr[0], arr[i]); 
+        printf("Swap arr[0]=%d and arr[%d]=%d \n",arr[0],i,arr[i]);
   
         // call max heapify on the reduced heap 
         heapify(arr, i, 0); 
@@ -89,11 +91,11 @@ int main()
 { 
     int arr[] = {3,19,1,14,8,7};       
     int n = sizeof(arr)/sizeof(arr[0]); 
-    pHeap(arr, n,0); 
+    // pHeap(arr, n,0); 
 
-    if ( 0 )
+    if ( 1 )
     {
-    cout << "Unsorted array  \n"; 
+    cout << "\nUnsorted array  \n"; 
     printArray(arr, n); 
     cout << "----------\n"; 
     }  

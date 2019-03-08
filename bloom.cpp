@@ -17,9 +17,9 @@ template < class T1, size_t N = 1 > class Bloom
 {
 	private:
 		T1 a;
-		static const int entries1 = 1024*2*2; 
-		static const int entries2 = 1024*2*2*2*2;
-		static const int entries3 = 1024*2*2*2*2*2;
+		static const int entries1 = 1024*8; 
+		static const int entries2 = 1024*16;
+		static const int entries3 = 1024*32;
 		int _lines = N;
 		int _totalEntries = 0;
 		int _totalSize= 0;
@@ -104,7 +104,7 @@ main ()
 	Bloom < std::string, 4 > test1;
 
 	std::string z;
-	for (int a = 0; a < 200000; a++)
+	for (int a = 0; a < 530000; a++)
 	{
 		z = random_string (a % 32 + 5);
 		test1.insert (z);
@@ -129,6 +129,8 @@ main ()
 	auto family = {"Jeremy  Levine","Marcy Grossman-Levine","Dylan Levine","Sydney Levine","Jacob Levine"};
 	What(family);
 	What(*family.begin());
+	for ( int i=0 ; i< 10000 ; i++)
+	{
 	for( auto &zz:family)
 	{
 		if (test1.check(zz))
@@ -137,6 +139,10 @@ main ()
 			std::cout << zz<< " - was _NOT_found !! \n";
 
 	}
+	}
+
+	for ( int i=0 ; i< 10000 ; i++)
+	{
 	for( auto zz:familyMush)
 	{
 		if (test1.check(zz))
@@ -144,6 +150,7 @@ main ()
 		else
 			std::cout << zz<< " - was _NOT_found !! \n";
 
+	}
 	}
 	std::map<std::string,int> ids;
 	std::cout << ids["sss"s] << '\n';

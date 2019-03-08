@@ -39,5 +39,7 @@ int main()
     g(a);
     z = 10;
   }
+  std::cout << (int) '6'  - (int) '0' << '\n';
+  std::cout << (int) '9'  - (int) '0' << '\n';
   return 0;
 }
