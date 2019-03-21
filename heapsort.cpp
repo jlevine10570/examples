@@ -33,11 +33,14 @@ void heapify(int arr[], int n, int i)
     int r = 2*i + 2; // right = 2*i + 2 
   
     // If left child is larger than root 
-    if (l < n && arr[l] > arr[largest]) 
+    if ( l < n )
+    {
+    if ( arr[l] > arr[largest]) 
         largest = l; 
+    }
   
     // If right child is larger than largest so far 
-    if (r < n && arr[r] > arr[largest]) 
+    if ((r < n) && arr[r] > arr[largest]) 
         largest = r; 
   
     // If largest is not root 
@@ -59,7 +62,7 @@ void heapSort(int arr[], int n)
     for (int i = n / 2 - 1; i >= 0; i--) 
     {
 //        std::cout << "call heapify \n";
- //       printArray(arr, n); 
+        printArray(arr, n); 
         heapify(arr, n, i); 
     }
     std::cout << "\n-- Print  Array ----------------------------\n";
@@ -71,7 +74,7 @@ void heapSort(int arr[], int n)
     { 
         // Move current root to end 
         swap(arr[0], arr[i]); 
-        printf("Swap arr[0]=%d and arr[%d]=%d \n",arr[0],i,arr[i]);
+        //printf("Swap arr[0]=%d and arr[%d]=%d \n",arr[0],i,arr[i]);
   
         // call max heapify on the reduced heap 
         heapify(arr, i, 0); 
@@ -81,6 +84,7 @@ void heapSort(int arr[], int n)
 /* A utility function to print array of size n */
 void printArray(int arr[], int n) 
 { 
+	if ( 1 ) return ;
     for (int i=0; i<n; ++i) 
         cout << arr[i] << " "; 
     cout << "\n"; 
@@ -89,11 +93,20 @@ void printArray(int arr[], int n)
 // Driver program 
 int main() 
 { 
-    int arr[] = {3,19,1,14,8,7};       
-    int n = sizeof(arr)/sizeof(arr[0]); 
+    int arr[400000];
+    int n = sizeof(arr)/sizeof(int); 
     // pHeap(arr, n,0); 
 
-    if ( 1 )
+    int q;
+    q=100;
+
+    for( int i =0 ; i< q ; i++)
+    {
+    for( int z =0 ; z< n ; z++)
+    {
+	    arr[z]=z%13345+i;
+    }
+    if ( 0 )
     {
     cout << "\nUnsorted array  \n"; 
     printArray(arr, n); 
@@ -104,4 +117,5 @@ int main()
   
     cout << "Sorted array is \n"; 
     printArray(arr, n); 
+    }
 } 

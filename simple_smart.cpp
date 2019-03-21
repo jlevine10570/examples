@@ -54,8 +54,8 @@ public:
         }
     }
 
-    T& operator* () { std::cout << " Use * \n"; return *pData; }
-    T* operator-> () { return pData; }
+    T& operator* () { std::cout << "Use * \n"; return *pData; }
+    T* operator-> () { std::cout << "Use -> \n";return pData; }
     
     SMARTPTR<T>& operator = (const SMARTPTR<T>& sp)
     {
@@ -81,8 +81,22 @@ public:
 
 int main()
 {
-	struct ZZ{ int x; int y;};
+	struct ZZ{ 
+		int x; 
+		int y; 
+ SMARTPTR <int> xxx;
+
+	};
 SMARTPTR <ZZ> foo(new ZZ);
-(*foo).x=9;
-foo->x=9;
+//(*foo).x=9;
+//foo->x=9;
+foo->xxx = SMARTPTR <int> (new int);
+std::cout << "----------------\n";
+auto zzzz = foo->xxx;
+*zzzz = 999;
+std::cout << "----------------\n";
+*(foo->xxx) = 999;
+std::cout << "----------------\n";
+*(*foo).xxx  = 999;
+
 }
