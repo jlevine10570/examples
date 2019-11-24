@@ -1,0 +1,111 @@
+    1  ls
+    2  sudo apt-get purge g++
+    3  g++
+    4  sudo apt-get purge g++
+    5  cl++
+    6  cd examples-master/
+    7  cl++
+    8  ls
+    9  ls -l
+   10  cat cont.cpp 
+   11  cl+ cont.cpp
+   12  . ~/.bashrc 
+   13  cl+ cont.cpp
+   14  alias
+   15  cl++ cont.cpp
+   16  cl++ cl++ --version
+   17  sudo apt-get install clang-6.0 clang-tools-6.0 clang-6.0-doc libclang-common-6.0-dev libclang-6.0-dev libclang1-6.0 libllvm-6.0-ocaml-dev libllvm6.0 lldb-6.0 llvm-6.0 llvm-6.0-dev llvm-6.0-doc llvm-6.0-examples llvm-6.0-runtime clang-format-6.0 python-clang-6.0 lldb-6.0-dev lld-6.0 libfuzzer-6.0-dev 
+   18  sudo apt update
+   19  apt-get install clang-6.0 clang-tools-6.0 clang-6.0-doc libclang-common-6.0-dev libclang-6.0-dev libclang1-6.0 libllvm-6.0-ocaml-dev libllvm6.0 lldb-6.0 llvm-6.0 llvm-6.0-dev llvm-6.0-doc llvm-6.0-examples llvm-6.0-runtime clang-format-6.0 python-clang-6.0 lldb-6.0-dev lld-6.0 libfuzzer-6.0-dev 
+   20  wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
+   21  sudo apt update
+   22  sudo apt-get install clang-6.0 clang-tools-6.0 clang-6.0-doc libclang-common-6.0-dev libclang-6.0-dev libclang1-6.0 libllvm-6.0-ocaml-dev libllvm6.0 lldb-6.0 llvm-6.0 llvm-6.0-dev llvm-6.0-doc llvm-6.0-examples llvm-6.0-runtime clang-format-6.0 python-clang-6.0 lldb-6.0-dev lld-6.0 libfuzzer-6.0-dev 
+   23  cl++ --version
+   24  cl++ cont.cpp
+   25  sudo apt-get install clang-6.0 clang-tools-6.0 clang-6.0-doc libclang-common-6.0-dev libclang-6.0-dev libclang1-6.0 libllvm-6.0-ocaml-dev libllvm6.0 lldb-6.0 llvm-6.0 
+   26  sudo apt-get install clang-6.0 clang-tools-6.0 
+   27  sudo apt-get install libclang-common-6.0-dev libclang-6.0-dev libclang1-6.0 libllvm-6.0-ocaml-dev libllvm6.0 lldb-6.0 llvm-6.0 
+   28  sudo apt-get install libclang-common-6.0-dev libclang-6.0-dev libclang1-6.0  libllvm6.0 lldb-6.0 llvm-6.0 
+   29  cl++ cont.cpp
+   30  cd /
+   31  find ./* -name "iostre*" -print
+   32  ls /usr/include/
+   33  ls /usr/include/5
+   34  cd /usr
+   35  find ./* -name "iostre*" -print
+   36  ls ./include/c++/5
+   37  clang -v
+   38  cd
+   39  cd examples-master/
+   40  cl++ -isystem /usr/include/c++/5
+   41  cl++ -isystem /usr/include/c++/5 list.cpp 
+   42  cd /
+   43  find ./* -name "iostre*" -print
+   44  find ./* -name "c++config.h*" -print
+   45  cl++ -isystem /usr/include/x86_64-linux-gnu/c++/5/ list.cpp 
+   46  cd 
+   47  cd examples-master/
+   48  cl++ -isystem /usr/include/x86_64-linux-gnu/c++/5/ list.cpp 
+   49  ls /usr/include/c++
+   50  cl++ -isystem /usr/include/x86_64-linux-gnu/c++/5/ list.cpp 
+   51  ls /usr/include/clang/
+   52  ls /usr/include/clang/6.0.0/
+   53  ls /usr/include/clang/6.0.0/include
+   54  ls /usr/include/c++/5/tuple
+   55  cl++ -isystem /usr/include/c++/5 list.cpp 
+   56  ls /usr/include/c++/5/bits
+   57  cl++ -isystem /usr/include/c++/5 list.cpp 
+   58  cl++ --help
+   59* ls /usr/include/clang/6.0.0/include/
+   60  cl++ -isystem /usr/include/x86_64-linux-gnu/c++/5/ list.cpp 
+   61  ls /usr/include/x86_64-linux-gnu/c++/5/
+   62  ls /usr/include/x86_64-linux-gnu/c++/5/bits/
+   63  cl++ -isystem /usr/include/c++/5 -isystem /usr/include/x86_64-linux-gnu/c++/5/ list.cpp 
+   64  sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+   65  sudo apt update
+   66  sudo apt install g++-7 -y
+   67  sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 60                          --slave /usr/bin/g++ g++ /usr/bin/g++-7 
+   68  sudo update-alternatives --config gcc
+   69  sudo update-alternatives --config g++
+   70  g++
+   71  g++ --version
+   72  g++ list.hpp -std=c++17
+   73  cl++ -isystem /usr/include/c++/5 -isystem /usr/include/x86_64-linux-gnu/c++/5/ list.cpp 
+   74  cl+ list.cpp 
+   75  cl++ list.cpp 
+   76  ls /usr/include/x86_64-linux-gnu/c++/5/bits/
+   77  ls /usr/include/x86_64-linux-gnu/c++/7.3.0/
+   78  ls /usr/include/x86_64-linux-gnu/c++/7.3.0/ext/
+   79  cd /
+   80  find ./* -name "c++config.h*" -print
+   81  find ./* -name "tuple*" -print
+   82  find ./* -name "appl*" -print
+   83  find ./* -name "apply*" -print
+   84  cd /usr/include/
+   85  find ./* -name "apply*" -print
+   86  find ./* -name "apply" -print
+   87  cd
+   88  cd examples-master/
+   89  cl++ list.cpp 
+   90  find /usr/include/ -name "tuple*" -print
+   91  cl++ -isystem /usr/include/c++/7 list.cpp 
+   92  find /usr/* -name "c++config.h" -print
+   93  cl++ -isystem /usr/include/c++/7 -isystem /usr/include/x86_64-linux-gnu/c++/7/ list.cpp 
+   94  alias cl++
+   95  vi ~/.basrc
+   96  vi ~/.bashrc 
+   97  cl++ -isystem /usr/include/c++/7 -isystem /usr/include/x86_64-linux-gnu/c++/7/ list.cpp 
+   98  cl++ -isystem /usr/include/c++/7 -isystem /usr/include/x86_64-linux-gnu/c++/7/ list.cpp  -v
+   99  cd /
+  100  find ./* -name "libc+*" -pirnt
+  101  find ./* -name "libc+*" -ls
+  102  alias cl++
+  103  clang++  -isystem /usr/include/c++/7 -isystem /usr/include/x86_64-linux-gnu/c++/7/ list.cpp  -v
+  104  clang++  -isystem /usr/include/c++/7 -isystem /usr/include/x86_64-linux-gnu/c++/7/ list.cpp  
+  105  cd 
+  106  cd examples-master/
+  107  clang++  -isystem /usr/include/c++/7 -isystem /usr/include/x86_64-linux-gnu/c++/7/ list.cpp  
+  108  clang++  -isystem /usr/include/c++/7 -isystem /usr/include/x86_64-linux-gnu/c++/7/ list.cpp  -std=c++17
+  109  ./a.out 
+  110  clang++   list.cpp  -std=c++17
+  111  history  > ~/works
